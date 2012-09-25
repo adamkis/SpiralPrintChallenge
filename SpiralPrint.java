@@ -196,8 +196,13 @@ public class SpiralPrint {
 	public static void main(String[] args) {
 		
 		SpiralPrint sp = new SpiralPrint();
-		sp.printSpiralOrder(args[0]);
-
+		
+		try{	
+			sp.printSpiralOrder(args[0]);
+		}
+		catch(Exception e){
+			System.out.print( "No argument given. Please give path of input file as arhument. " + e.getMessage() );
+		}
 	}
 
 }
